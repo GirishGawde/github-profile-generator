@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #000000 0%, #1e2a47 100%);
+    color: #ffffff;
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    padding-bottom: 60px; 
+}
+
+header {
+    position: fixed; 
+    top: 25px;
+    left: 30px;
+    z-index: 1000;   
+    background: transparent;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    cursor: default;
+}
+.search {
+    background: rgba(30, 42, 71, 0.8); 
+    backdrop-filter: blur(10px); 
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #141d2f;
+    color: white;
+    font-family: inherit;
+    text-align: center;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    box-shadow: 0 0 10px rgba(0, 121, 255, 0.5); 
+}
+
+button {
+    background-color: #0079ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    font-family: inherit;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #60abff;
+    transform: translateY(-2px); 
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.profile-card {
+    background: rgba(30, 42, 71, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+    animation: slideUp 0.6s ease-out;
+    
+    display: flex;
+    flex-direction: column; 
+    overflow: hidden;
+}
+
+.card-left {
+    padding: 2.5rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-right {
+    padding: 2.5rem;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.avatar-box img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #141d2f;
+    box-shadow: 0 0 20px rgba(0, 121, 255, 0.3);
+    margin-bottom: 15px;
+}
+
+.bio {
+    margin: 15px 0;
+    color: #a0aab9;
+    font-size: 0.95rem;
+}
+
+.skill-badge span {
+    background: #2ea44f;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background: rgba(20, 29, 47, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.stats span {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.stats strong {
+    font-size: 1.2rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.view-btn {
+    display: inline-block;
+    background-color: #141d2f;
+    color: #0079ff;
+    border: 1px solid #0079ff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.view-btn:hover {
+    background-color: #0079ff;
+    color: white;
+}
+
+.repos-section h4 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #fff;
+}
+
+.repo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.chart-container {
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+
+footer {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    padding: 15px;
+    color: #8b949e;
+    font-size: 0.9rem;
+    background-color: #141d2f; 
+    backdrop-filter: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+footer a {
+    color: #0079ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.search {
+    margin-top: 100px; 
+}
+@media (min-width: 800px) {
+    .profile-card {
+        flex-direction: row; 
+        text-align: left;
+    }
+
+    .card-left {
+        flex: 0 0 35%; 
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        align-items: flex-start; 
+        text-align: left;
+    }
+    
+    .card-left .stats {
+        margin-top: auto; 
+    }
+    
+    .avatar-box, .stats, .view-btn, .skill-badge {
+        align-self: center;
+    }
+
+    .card-right {
+        padding: 3rem;
+    }
+}
