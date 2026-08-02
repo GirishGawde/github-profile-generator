@@ -12,6 +12,3 @@ A professional developer tool that visualizes GitHub profiles using the GitHub A
 - **Frontend:** HTML5, CSS3, Vanilla JavaScript
 - **API:** GitHub REST API
 - **Libraries:** Chart.js, JetBrains Mono Font
-
-## 👨‍💻 Built By
-Girish Gawde - 2026
